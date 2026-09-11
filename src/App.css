@@ -728,4 +728,30 @@
   .sticky-copy span {
     display: none;
   }
+
+  .sticky {
+    gap: 8px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  }
+
+  .sticky-actions .btn {
+    width: auto;
+    min-height: 40px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sticky-copy {
+    display: none;
+  }
+
+  .sticky-actions {
+    width: 100%;
+  }
+
+  .sticky-actions .btn {
+    flex: 1;
+  }
 }
