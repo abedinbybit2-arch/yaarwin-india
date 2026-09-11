@@ -15,7 +15,7 @@
     linear-gradient(180deg, #0b0c10 0%, #08090d 40%, #0c0d12 100%);
 }
 
-.site > *:not(.ambient) {
+.site > *:not(.ambient):not(.sticky) {
   position: relative;
   z-index: 1;
 }
@@ -200,7 +200,7 @@
   padding: 12px 22px;
   border-radius: 999px;
   font-size: 14px;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0.2px;
   transition: transform 0.18s ease, filter 0.18s ease, border-color 0.18s ease;
 }
@@ -402,7 +402,7 @@
 .poster-copy h3,
 .steps h3 {
   font-size: 18px;
-  font-weight: 650;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
@@ -422,7 +422,7 @@
   gap: 6px;
   color: var(--gold-2);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .poster-stack {
@@ -451,7 +451,7 @@
   font-size: 11px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .poster-frame {
@@ -459,6 +459,12 @@
   overflow: hidden;
   border: 1px solid var(--line);
   background: #050505;
+}
+
+.poster-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .poster-copy .btn {
@@ -507,7 +513,7 @@
 
 .faq-list summary {
   cursor: pointer;
-  font-weight: 650;
+  font-weight: 600;
   list-style: none;
 }
 
@@ -587,7 +593,7 @@
 .footer-links a {
   color: var(--gold-2);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .sticky {
@@ -595,7 +601,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 40;
+  z-index: 80;
   display: flex;
   align-items: center;
   justify-content: space-between;
