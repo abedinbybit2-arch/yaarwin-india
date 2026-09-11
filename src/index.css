@@ -7,17 +7,18 @@
 }
 
 :root {
-  --bg: #08090d;
-  --bg-2: #101218;
-  --bg-3: #161821;
-  --gold: #c9a24a;
-  --gold-2: #e8d5a3;
-  --gold-deep: #8d6b24;
-  --ink: #f4efe4;
-  --muted: #9b9488;
-  --line: rgba(201, 162, 74, 0.22);
-  --card: rgba(255, 248, 230, 0.03);
-  --tg: #2aabee;
+  --bg: #f4f1ea;
+  --bg-2: #fbfaf6;
+  --paper: #ffffff;
+  --gold: #9a7424;
+  --gold-2: #c4a35a;
+  --gold-deep: #7a5a16;
+  --ink: #1c1915;
+  --muted: #6b645c;
+  --line: rgba(28, 25, 21, 0.1);
+  --card: #ffffff;
+  --shadow: 0 18px 50px rgba(40, 32, 18, 0.08);
+  --tg: #1a7fb8;
   --display: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Outfit', system-ui, sans-serif;
 }
@@ -25,6 +26,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  color-scheme: light;
 }
 
 body {
@@ -59,8 +61,8 @@ button {
 }
 
 ::selection {
-  background: rgba(201, 162, 74, 0.28);
-  color: #fff;
+  background: rgba(154, 116, 36, 0.22);
+  color: var(--ink);
 }
 
 :focus-visible {

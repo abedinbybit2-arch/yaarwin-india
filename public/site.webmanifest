@@ -4,8 +4,8 @@
   "description": "Official YaarWin India login and register. Claim ₹1,00,000 gift code on sign up.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0B0C10",
-  "theme_color": "#0B0C10",
+  "background_color": "#F4F1EA",
+  "theme_color": "#F4F1EA",
   "lang": "en-IN",
   "icons": [
     {
