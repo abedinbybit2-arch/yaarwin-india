@@ -8,22 +8,27 @@ const GIFT = '₹1,00,000'
 
 const GAME_CATEGORIES = [
   {
+    icon: '🎯',
     title: 'Colour Prediction & Lottery Games',
     text: 'Explore fast-result prediction and lottery-style games designed for users who enjoy quick rounds, simple choices, and instant gameplay.',
   },
   {
+    icon: '⚡',
     title: 'Instant Play Entertainment Games',
     text: 'Enjoy quick-play games that are perfect for short sessions, offering easy navigation, fast loading, and smooth performance on all devices.',
   },
   {
+    icon: '🎰',
     title: 'Slots & Casino Style Games',
     text: 'Discover interactive slot and casino-style games with engaging layouts, smooth controls, and an enjoyable experience for both new and regular users.',
   },
   {
+    icon: '🏆',
     title: 'Popular & Trending Games',
     text: 'Access some of the most played and trending games on YaarWin Game, ideal for users looking for quick entertainment and easy game selection.',
   },
   {
+    icon: '🃏',
     title: 'Card & Arcade Gaming Options',
     text: 'Play a variety of card-based and arcade-style games designed for casual users who prefer simple and entertaining gameplay.',
   },
@@ -148,10 +153,7 @@ export default function App() {
 
       <nav className="nav">
         <a href="#top" className="brand" onClick={() => setMenuOpen(false)}>
-          <span className="brand-mark">Y</span>
-          <span className="brand-text">
-            YaarWin <em>India</em>
-          </span>
+          <img src="/logo.png" alt="YaarWin" className="brand-logo" />
         </a>
 
         <button
@@ -266,36 +268,37 @@ export default function App() {
         </div>
       </section>
 
-      <section id="games" className="section">
-        <div className="section-head">
-          <p className="eyebrow">Catalogue</p>
-          <h2>Game categories on YaarWin Game</h2>
-          <p className="section-sub">
-            YaarWin Game offers a wide range of game categories designed to suit
-            every player&apos;s interest and playing style. Whether you prefer
-            quick prediction-based games or simple entertainment options, the
-            platform provides smooth access and an easy-to-use experience for
-            all users.
-          </p>
-        </div>
-        <div className="cat-grid">
-          {GAME_CATEGORIES.map((g, i) => (
-            <article key={g.title} className="cat-card">
-              <span className="cat-index">{String(i + 1).padStart(2, '0')}</span>
-              <h3>{g.title}</h3>
-              <p>{g.text}</p>
-              <button type="button" onClick={openRegister}>
-                Explore <IconArrow />
-              </button>
-            </article>
-          ))}
+      <section id="games" className="yw-game-cats">
+        <div className="yw-cats-wrap">
+          <div className="yw-head">
+            <span className="yw-badge">Game Categories on YaarWin Game</span>
+            <p>
+              YaarWin Game offers a wide range of game categories designed to suit
+              every player&apos;s interest and playing style. Whether you prefer
+              quick prediction-based games or simple entertainment options, the
+              platform provides smooth access and an easy-to-use experience for
+              all users.
+            </p>
+          </div>
+          <div className="yw-cats-grid">
+            {GAME_CATEGORIES.map((g) => (
+              <article key={g.title} className="yw-cat-card">
+                <div className="yw-cat-icon">{g.icon}</div>
+                <h3>{g.title}</h3>
+                <p>{g.text}</p>
+                <button type="button" className="yw-cat-btn" onClick={openRegister}>
+                  Explore
+                </button>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section id="offers" className="section">
         <div className="section-head">
           <p className="eyebrow">Campaigns</p>
-          <h2>Official offers &amp; rewards</h2>
+          <h2 className="yw-h2">Official offers &amp; rewards</h2>
           <p className="section-sub">
             Live YaarWin Game promotions — referral jackpot, deposit bonus,
             daily salary and ads support. Register to claim inside your account.
@@ -405,7 +408,7 @@ export default function App() {
       <section id="how" className="section">
         <div className="section-head">
           <p className="eyebrow">Get started</p>
-          <h2>Three steps. Then you play.</h2>
+          <h2 className="yw-h2">Three steps. Then you play.</h2>
         </div>
         <ol className="steps">
           <li>
@@ -437,7 +440,7 @@ export default function App() {
       <section id="faq" className="section">
         <div className="section-head">
           <p className="eyebrow">FAQ</p>
-          <h2>Login, register &amp; gift code</h2>
+          <h2 className="yw-h2">Login, register &amp; gift code</h2>
         </div>
         <div className="faq-list">
           <details open>
@@ -493,10 +496,7 @@ export default function App() {
 
       <footer className="footer">
         <div className="brand">
-          <span className="brand-mark">Y</span>
-          <span className="brand-text">
-            YaarWin <em>India</em>
-          </span>
+          <img src="/logo.png" alt="YaarWin" className="brand-logo" />
         </div>
         <p>
           © {new Date().getFullYear()} YaarWin India · Login &amp; Register · {GIFT}{' '}
