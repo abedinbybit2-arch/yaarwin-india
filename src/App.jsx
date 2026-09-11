@@ -198,7 +198,7 @@ export default function App() {
           <p className="eyebrow">Official India access</p>
           <h1>
             YaarWin login &amp; register.
-            <span>{GIFT} gift code on sign&nbsp;up.</span>
+            <span>{GIFT} gift code on sign up.</span>
           </h1>
           <p className="lead">
             A refined entry point for YaarWin in India. Create your account,

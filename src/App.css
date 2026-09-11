@@ -786,6 +786,11 @@ th:last-child {
     gap: 28px;
   }
 
+  .hero h1 {
+    font-size: clamp(32px, 8.4vw, 42px);
+    overflow-wrap: break-word;
+  }
+
   .gift-panel {
     justify-content: stretch;
   }
