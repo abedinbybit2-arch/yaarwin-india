@@ -279,11 +279,12 @@
 
 .gift-amount {
   font-family: var(--display);
-  font-size: 72px;
-  line-height: 1;
+  font-size: clamp(40px, 6vw, 56px);
+  line-height: 1.05;
   font-weight: 600;
   color: var(--gold-2);
   margin: 10px 0 14px;
+  letter-spacing: -0.03em;
 }
 
 .gift-copy {
@@ -328,7 +329,7 @@
 .stat strong {
   display: block;
   font-family: var(--display);
-  font-size: 28px;
+  font-size: clamp(18px, 2.4vw, 28px);
   font-weight: 600;
   color: var(--gold-2);
 }
@@ -425,20 +426,42 @@
   font-weight: 600;
 }
 
-.poster-stack {
+.offer-stack {
   display: grid;
   gap: 22px;
 }
 
-.poster-card {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 24px;
-  align-items: center;
-  padding: 18px;
+.offer-panel {
+  padding: 26px 24px 24px;
   border-radius: 22px;
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.offer-featured {
+  background:
+    radial-gradient(700px 180px at 0% 0%, rgba(201, 162, 74, 0.12), transparent 60%),
+    var(--card);
+  border-color: var(--line);
+}
+
+.offer-head {
+  margin-bottom: 18px;
+}
+
+.offer-head h3 {
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 8px 0 8px;
+}
+
+.offer-head p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 640px;
 }
 
 .poster-tag {
@@ -454,21 +477,76 @@
   font-weight: 600;
 }
 
-.poster-frame {
-  border-radius: 16px;
-  overflow: hidden;
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 14px;
   border: 1px solid var(--line);
-  background: #050505;
+  margin-bottom: 16px;
 }
 
-.poster-frame img {
+table {
   width: 100%;
-  height: auto;
-  display: block;
+  border-collapse: collapse;
+  min-width: 420px;
 }
 
-.poster-copy .btn {
-  margin-top: 18px;
+th,
+td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+}
+
+th {
+  background: rgba(201, 162, 74, 0.12);
+  color: var(--gold-2);
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+td {
+  color: var(--ink);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover td {
+  background: rgba(201, 162, 74, 0.05);
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--gold-2);
+  font-weight: 600;
+}
+
+.offer-notes {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 18px;
+}
+
+.offer-notes li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.offer-notes li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
 }
 
 .steps {
@@ -635,10 +713,8 @@
 
 @media (max-width: 960px) {
   .hero,
-  .poster-card,
   .steps,
   .cat-grid,
-  .pillar-grid,
   .stats {
     grid-template-columns: 1fr 1fr;
   }
@@ -699,9 +775,7 @@
 
   .stats,
   .cat-grid,
-  .pillar-grid,
-  .steps,
-  .poster-card {
+  .steps {
     grid-template-columns: 1fr;
   }
 
